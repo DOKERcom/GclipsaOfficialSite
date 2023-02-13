@@ -1,0 +1,1068 @@
+/* Убираем внешние отступы */
+html,body,h1,h2,h3,h4,h5,h6,p,ul,li,a, img{
+	padding: 0;
+ 	margin: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+html,body{
+	height: 100%;
+}
+*,*:before,*:after{
+	padding: 0;
+	border: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.main_body{
+	display: grid;
+	margin: 10px 0;
+	grid-template-columns:1fr;
+	grid-template-rows: minmax(100px, max-content);
+	grid-template-areas: 
+	"container1";
+}
+.container1{
+	display: grid;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 
+	"head"
+	"body"
+	"foot";
+}
+
+.welcome_box{
+	grid-area: head;
+	text-align: center;
+	height: 7.5vw;
+
+	background: url(../svg/title_index_1.svg) 50% 50% no-repeat fixed;
+    background-size: 100%;
+    background-attachment: scroll;
+}
+.welcome_text{
+	font-size: 3.85vw;
+	margin-top: 1.45vw;
+	color: white;
+	background: linear-gradient(-60deg, #b04343 31%, #851d1d 50%, #eb7171 65%);
+	-webkit-background-clip: text;
+	background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	/*background-color: lightgray;*/
+}
+.familiar_box{
+	grid-area: body;
+	margin-top: 2%;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns:5% 1fr 5%;
+	grid-template-areas: 
+	"buffl center buffr";
+}
+.familiar_box_items{
+	grid-area: center;
+	display: grid;
+	grid-template-columns:25% 5% 70%;
+	grid-template-areas: 
+	"left center right";
+	/*background-color: darkgray;*/
+}
+
+.leftmenu{
+	grid-area: left;
+	border: 1px solid;
+	border-color: #8c5858;
+	background-color: #521e1e;
+	position:relative;
+}
+
+.l_username_group{
+	display: flex;
+}
+
+.l_username{
+	border: 1px solid;
+	border-color: #8c5858;
+	width: 73%;
+	margin-left: 5%;
+	margin-right: -3%;
+	margin-top: 5%;
+	text-align: center;
+	
+}
+.l_username p{
+	text-transform: uppercase;
+	color: white;
+	font-size: 1.5vw;
+	padding: 2.25% 0 1% 0;
+}
+.l_support_pic{
+	border: 1px solid;
+	border-color: #8c5858;
+	background-color: #391212;
+	margin-left: 5%;
+	width: 15%;
+	margin-top: 5%;
+	justify-content: center;
+	/*margin: auto;*/
+}
+
+.l_support_pic img{
+	padding: 5%;
+	width:70%;
+	margin-left: 15%;
+	height: 100%;
+}
+
+.l_support_pic:hover{
+	transition-property: background-color;
+  	transition-duration: 0.2s;
+	background-color: #491212;
+	cursor: pointer;
+}
+
+.l_balance_group{
+	display: flex;
+	margin-top: 2.5%;
+
+}
+
+.l_balance{
+	border: 1px solid;
+	border-color: #8c5858;
+	width: 48%;
+	margin-left: 5%;
+	text-align: center;
+}
+.l_balance p{
+	color: white;
+	font-size: 1.5vw;
+	padding-top: 2.5%;
+	/*background-color: gray;*/
+}
+
+.l_balance_int{
+	border: 1px solid;
+	border-color: #8c5858;
+	width: 23%;
+	text-align: center;
+	margin-left: 2%;
+}
+
+.l_balance_int p{
+	color: white;
+	font-size: 1.5vw;
+	padding-top: 5.5%;
+	/*background-color: gray;*/
+}
+
+.l_balance_pic{
+	border: 1px solid;
+	
+	border-color: #8c5858;
+	background-color: #391212;
+	margin-left: 2%;
+	width: 15%;
+	justify-content: center;
+	/*margin: auto;*/
+}
+
+.l_balance_pic:hover{
+	transition-property: background-color;
+  	transition-duration: 0.2s;
+	background-color: #491212;
+	cursor: pointer;
+}
+
+.l_balance_pic_buff{
+	width: 70%;
+	height: 100%;
+	/*background-color: gray;*/
+	margin: 0 auto;
+}
+.l_balance_pic img{
+	width: 100%;
+	padding: 5%;
+	/*margin-top:25%;*/
+	/*padding-top: 10%;*/
+	/*background-color: darkgray;*/
+}
+.button{
+	border: 1px solid;
+	border-color: #8c5858;
+	width: 90%;
+	text-align: center;
+	background-color: #391212;
+	margin-top: 3.5%;
+	margin-left: 5%;
+}
+.button:last-child{
+	margin-bottom: 5%;
+}
+
+.button:hover{
+	transition-property: background-color;
+  	transition-duration: 0.2s;
+	background-color: #491212;
+	cursor: pointer;
+}
+
+.button p{
+	color: white;
+	font-size: 1.5vw;
+	padding: 2% 0;
+}
+/*-------------------------------------------------------------PRELAST*/
+.prelast{
+	margin-bottom: 7vw;
+}
+/*-------------------------------------------------------------PRELAST*/
+.l_signout{
+	position:absolute;
+	bottom:0;
+}
+/*---------------------------------------------------right menu*/
+.rightmenu{
+	grid-area: right;
+	display: grid;
+	border: 1px solid;
+	border-color: #8c5858;
+	background-color: #521e1e;
+	/*min-height: 20vw;*/
+}
+.rightmenu_buff{
+	margin: auto 0;
+	/* background-color: gray; */
+}
+.r_profile_box{
+	display: auto;
+	margin-top: -2vw;
+	/*min-height: 20vw;*/
+}
+.rpb_name{
+	text-align: center;
+}
+.rpb_name p{
+	color: white;
+	font-size: 2vw;
+	padding: 1.5% 0 1.5% 0;
+}
+.rpb_acc_status{
+	border: 1px solid;
+	border-color: #8c5858;
+	width: 60%;
+	margin: 0 20%;
+	margin-bottom: 1%;
+}
+.rpb_acc_status p{
+	text-transform: uppercase;
+	color: white;
+	font-size: 1.5vw;
+	padding: 1% 0 0.5% 0;
+	padding-left: 1%;
+}
+.rpb_mail_box{
+	/*background-color: gray;*/
+	display: flex;
+	margin: 0 20%;
+	margin-bottom: 1%;
+	width: 60%;
+}
+
+.rpb_mail{
+	border: 1px solid;
+	border-color: #8c5858;
+	width: 83%;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+.rpb_mail p{
+	color: white;
+	font-size: 1.37vw;
+	padding: 0.5% 0 0.5% 0;
+	padding-left: 1%;
+	font-family: "Oswald";
+}
+.rpb_verify{
+	border: 1px solid;
+	border-color: #8c5858;
+	margin-left: 1%;
+	width: 7%;
+}
+.rpb_verify_buff{
+	width: 80%;
+	margin-top: 11%;
+	margin-left: 11%;
+	/*background-color:gray;*/
+}
+
+.rpb_verify img{
+	width: 100%;
+}
+.rpb_confirm{
+	border: 1px solid;
+	border-color: #8c5858;
+	width: 18%;
+	margin-left: 1%;
+	text-align: center;
+	background-color:#391212; 
+}
+.rpb_confirm p{
+	color: white;
+	font-size: 1vw;
+	padding-top: 10%;
+	padding-left: 1%;
+}
+.rpb_confirmed {
+	border: 1px solid;
+	border-color: #8c5858;
+	width: 18%;
+	margin-left: 1%;
+	text-align: center;
+	background-color:#521e1e; 
+}
+.rpb_confirmed p{
+	color: green;
+	font-size: 1vw;
+	padding-top: 10%;
+	padding-left: 1%;
+}
+
+.rpb_change_email{
+	border: 1px solid;
+	border-color: #8c5858;
+	background-color: #391212;
+	width: 60%;
+	margin: 1.5% 20%;
+	text-align: center;
+}
+.rpb_change_email p{
+	color: white;
+	font-size: 1.5vw;
+	padding: 1% 0 0.5% 0;
+	padding-left: 1%;
+}
+.rpb_change_password{
+	border: 1px solid;
+	border-color: #8c5858;
+	background-color: #391212;
+	width: 60%;
+	margin: 0 20%;
+	text-align: center;
+}
+.rpb_change_password p{
+	color: white;
+	font-size: 1.5vw;
+	padding: 1% 0 0.5% 0;
+	padding-left: 1%;
+}
+
+.rpb_button:hover{
+	transition-property: background-color;
+	transition-duration: 0.2s;
+	background-color: #491212;
+	cursor: pointer;
+}
+/*---------------------------------------change password*/
+.r_profile_changepass_box{
+	display: none;
+	/*background-color: gray;*/
+	grid-template-columns: 1fr;
+	grid-template-rows: auto, auto, auto;
+	grid-template-areas: 
+	"oldpass"
+	"newpass"
+	"renewpass";
+}
+.rpc_oldpass{
+	grid-area: oldpass;
+	display: flex;
+	/* background-color: gray; */
+	justify-content: center;
+	margin-bottom:1.5%;
+}
+.rpc_oldpass input{
+	font-size: 1.4vw;
+	background-color: #521e1e;
+	border: 2px solid #8c5858;
+	width: 60%;
+	font-family: "Oswald";
+	color: #fff;
+	padding-left: 5px;
+}
+.rpc_oldpass_warn{
+	grid-area: oldpass;
+	width: 60%;
+	margin-top:1%;
+	margin-left: 13.8vw;
+	display: flex;
+  	text-align: left;
+}
+.rpc_oldpass_warn p{
+	display: none;
+	padding-left: 5px;
+	color: orange;
+	font-size: 1.0vw;
+}
+
+.rpc_oldpass_pic{
+	width: 2.3vw;
+	margin-right: 5px;
+}
+
+.rpc_submit{
+	display: flex;
+	justify-content: center;
+}
+.rpc_submit_btn{
+	font-size: 1.8vw;
+	background-color: #6b2828;
+	border: 2px solid #8c5858;
+	color: #fff;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	width: 30%;
+	transition-property: background-color;
+  	transition-duration: 0.2s;
+  	font-family: "Bebas Neue";
+  	padding-left: 0px;
+	text-align: center;
+}
+.rpc_submit_btn:hover{
+	background-color: #7b2828;
+	transition-property: background-color;
+  	transition-duration: 0.2s;
+  	cursor: pointer;
+}
+
+/*---------------------------------------change mail*/
+.r_profile_changeemail_box{
+	display: none;
+	/*background-color: gray;*/
+	grid-template-columns: 1fr;
+	grid-template-rows: auto, auto, auto;
+	grid-template-areas: 
+	"pass"
+	"newemail"
+	"renewemail";
+}
+.rfc_pass{
+	grid-area: pass;
+	display: flex;
+	/* background-color: gray; */
+	justify-content: center;
+	margin-bottom:1.5%;
+}
+.rfc_pass input{
+	font-size: 1.4vw;
+	background-color: #521e1e;
+	border: 2px solid #8c5858;
+	width: 60%;
+	font-family: "Oswald";
+	color: #fff;
+	padding-left: 5px;
+}
+.rfc_pass_warn{
+	grid-area: oldpass;
+	width: 60%;
+	margin-top:1%;
+	margin-left: 13.8vw;
+	display: flex;
+  	text-align: left;
+}
+.rfc_pass_warn p{
+	display: none;
+	padding-left: 5px;
+	color: orange;
+	font-size: 1.0vw;
+}
+
+.rfc_pass_pic{
+	width: 2.3vw;
+	margin-right: 5px;
+}
+
+.rfc_submit{
+	display: flex;
+	justify-content: center;
+}
+.rfc_submit_btn{
+	font-size: 1.8vw;
+	background-color: #6b2828;
+	border: 2px solid #8c5858;
+	color: #fff;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	width: 30%;
+	transition-property: background-color;
+  	transition-duration: 0.2s;
+  	font-family: "Bebas Neue";
+  	padding-left: 0px;
+	text-align: center;
+}
+.rfc_submit_btn:hover{
+	background-color: #7b2828;
+	transition-property: background-color;
+  	transition-duration: 0.2s;
+  	cursor: pointer;
+}
+/*---------------------------------------change pass // mail*/
+.rpc_name{
+	text-align: center;
+}
+.rpc_name p{
+	color: white;
+	font-size: 2vw;
+	padding: 1.5% 0 1.5% 0;
+}
+/*---------------------------------------my puchases*/
+.r_my_purch_box{
+	display: none;
+	width: 96%;
+	margin-left: 2%;
+	margin-top: 1%;
+	/*min-height: 19.375vw;*/
+}
+
+.rmb_name_box{
+	display: flex;
+	width: 100%;
+
+	/*background-color: gray;*/
+}
+
+.rmb_total_soft{
+	width: 30%;
+	/*background-color: darkgray;*/
+	border: 1px solid;
+	border-color: #8c5858;
+	background-color: #8c5858;
+	cursor: pointer;
+	text-align: center;
+}
+.rmb_total_soft p{
+	color: white;
+	font-size: 1.3vw;
+	padding: 1.5% 0 0.5% 1%;
+}
+.rmb_name{
+	width: 30%;
+	/*background-color: lightgray;*/
+	margin-left: 5%;
+	text-align: center;
+}
+.rmb_name p{
+	color: white;
+	font-size: 1.8vw;
+
+	/*padding: 1% 0 0.5% 0;*/
+}
+.rmb_total_orders{
+	width: 30%;
+	margin-left: 5%;
+	/*background-color: darkgray;*/
+	cursor: pointer;
+	border: 1px solid;
+	border-color: #8c5858;
+	text-align: center;
+	transition-property: background-color;
+	transition-duration: 0.2s;
+}
+.rmb_total_orders:hover{
+	transition-property: background-color;
+	transition-duration: 0.2s;
+	background-color: #8c5858;
+}
+.rmb_total_orders p{
+	color: white;
+	font-size: 1.3vw;
+	padding: 1.5% 0 0.5% 1%;
+}
+
+
+.rmb_list{
+	width: 100%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	border: 1px solid;
+	border-color: #8c5858;
+}
+
+.list_ul{
+	list-style-type: none;
+	text-align: center;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin: 7px 0 0 0;
+	max-height: 20vw;
+	min-height: 13.10vw;
+	margin-bottom: 1%;
+}
+.list_ul :not(:first-child){
+	
+}
+.list_ul :first-child{
+	background-color:  #421e1e;
+}
+.list_li_box_nothead .ser_num{
+	text-transform: none;
+}
+.list_li_box_nothead .ser_num:hover{
+	cursor: pointer;
+	text-transform: none;
+}
+.list_li_box_nothead .ser_num:hover p{
+	transition-property: color;
+	transition-duration: 0.2s;
+	color:  #8c5858;
+}
+.list_li_box{
+	border: 1px solid #8c5858;
+  	margin-top: 0px;
+  	padding: 0.5vw;
+  	width: 95%;
+  	margin-left:2.5%;
+  	text-decoration: none;
+  	display: flex;
+  	margin-top: 1%;
+  	margin-bottom: 1%;
+  	background-color:  #621e1e;
+}
+.list_li_box p{
+	font-size: 1.3vw;
+  	color: white;
+	transition-property: color;
+	transition-duration: 0.2s;
+}
+
+
+
+.list_li_box div{
+	border: 1px solid #8c5858;
+}
+.pj_name{
+	width: 25%;
+}
+
+.pj_code{
+	width: 10%;
+}
+
+.ser_num{
+	width: 20%;
+}
+
+.date{
+	width: 15%;
+}
+
+.price{
+	width: 10%;
+}
+
+
+@media (max-width: 768px){
+	.familiar_box_items{
+		grid-area: center;
+		display: grid;
+		grid-template-columns:1fr;
+		grid-template-rows:auto 5% auto;
+		grid-template-areas: 
+		"top"
+		"center"
+		"bottom";
+		/*background-color: darkgray;*/
+	}
+	.leftmenu{
+		grid-area: top;
+		border: 1px solid;
+		border-color: #8c5858;
+		background-color: #521e1e;
+		position:static;
+		width: 100%;
+	}
+	.l_signout{
+		position:static;
+	}
+	.rightmenu{
+		grid-area: bottom;
+		/*max-height: 40vw;*/
+		width: 100%;
+		/*margin-bottom: 5%;*/
+		margin-bottom: 8vw;
+	}
+
+	.r_my_purch_box{
+		display: none;
+		width: 96%;
+		margin-left: 2%;
+		margin-top: 1%;
+		/*max-height: 40vw;*/
+		margin-bottom: 1%;
+
+	}
+	.rmb_list{
+		width: 100%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		border: 1px solid;
+		border-color: #8c5858;
+		display: grid;
+		grid-template-columns:100%;
+	}
+	.list_ul :first-child{
+		border: 1px solid #8c5858;
+		margin-top: 0px;
+		padding: 0.5vw;
+		width: 95%;
+		margin-left:2.5%;
+		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin-top: 1%;
+		margin-bottom: 1%;
+	}
+	.list_ul :not(:first-child){
+		border: 1px solid #8c5858;
+		margin-top: 0px;
+		padding: 0.5vw;
+		width: 95%;
+		margin-left:2.5%;
+		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin-top: 3%;
+		margin-bottom: 1%;
+	}
+	.list_li_box_nothead .pj_name{
+		border: 1px solid #8c5858;
+		margin-top: 0px;
+		padding: 0.5vw;
+		width: 95%;
+		margin-left:2.5%;
+		text-decoration: none;
+		display: flex;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		background-color:  #621e1e;
+	}
+	.list_ul{
+		max-height: 87vw;
+		/*min-height: 13.10vw;*/
+	}
+	.list_li_box p{
+		font-size: 4vw;
+	  	color: white;
+	}
+	.l_username{
+		width: 77%;
+		margin-left: 5%;
+		margin-top: 5%;
+	}
+	.l_username p{
+		color: white;
+		font-size: 5vw;
+		padding: 1% 0 0.75% 0;
+	}
+	.l_support_pic{
+		border: 1px solid;
+		border-color: #8c5858;
+		background-color: #391212;
+		margin-left: 5%;
+		width: 11%;
+		margin-top: 5%;
+		justify-content: center;
+		/*margin: auto;*/
+	}
+	
+	.l_support_pic img{
+		padding: 5%;
+		width:70%;
+		margin-left: 15%;
+		height: 100%;
+	}
+
+	.l_balance_group{
+		display: flex;
+		margin-top: 2.5%;
+	}
+
+	.l_balance{
+		width: 50%;
+		margin-left: 5%;
+	} 
+	.l_balance p{
+		font-size: 4vw;
+		padding-top: 2.5%;
+	}
+
+	.l_balance_int{
+		width: 25%;
+		margin-left: 2%;
+	}
+
+	.l_balance_int p{
+		font-size: 4vw;
+		padding-top: 5.5%;
+	}
+
+	.l_balance_pic{
+		margin-left: 2%;
+		width: 11%;
+	}
+
+	.button{
+		width: 90%;
+		margin-top: 3.5%;
+		margin-left: 5%;
+	}
+
+	.button p{
+		color: white;
+		font-size: 4vw;
+		padding: 2% 0;
+	}
+
+	.rmb_total_soft p{
+		color: white;
+		font-size: 3.25vw;
+		padding: 1.5% 0 0.5% 1%;
+		margin-top: 11%;
+	}
+	.rmb_name p{
+		color: white;
+		font-size: 4.5vw;
+
+		/*padding: 1% 0 0.5% 0;*/
+	}
+	
+	.rmb_total_orders p{
+		color: white;
+		font-size: 3.25vw;
+		padding: 1.5% 0 0.5% 1%;
+		margin-top: 11%;
+	}
+	/*------------------profile*/
+	.r_profile_box{
+		display: auto;
+		min-height: 45vw;
+		margin-top: 0vw;
+	}
+	.rpb_name p{
+		color: white;
+		font-size: 4.5vw;
+		padding: 1.5% 0 1.5% 0;
+	}
+	.rpb_acc_status{
+		width: 80%;
+		margin: 0 10%;
+		margin-bottom: 1%;
+	}
+	.rpb_acc_status p{
+		font-size: 3.5vw;
+		padding: 1% 0 0.5% 0;
+		padding-left: 1%;
+	}
+	.rpb_mail_box{
+		/*background-color: gray;*/
+		display: flex;
+		margin: 0 10%;
+		margin-bottom: 1%;
+		width: 80%;
+	}
+
+	.rpb_mail{
+		width: 70%;
+	}
+	.rpb_mail p{
+		font-size: 3.3vw;
+		padding: 0.5% 0 0.5% 0;
+		padding-left: 1%;
+		font-family: "Oswald";
+	}
+	.rpb_verify{
+		margin-left: 1%;
+		width: 10%;
+	}
+	.rpb_verify_buff{
+		width: 70%;
+		margin-top: 10%;
+		margin-left: 15%;
+	}
+	.rpb_verify img{
+		width: 100%;
+	}
+	.rpb_confirm{
+		width: 31%;
+		margin-left: 1%;
+	}
+	.rpb_confirm p{
+		font-size: 3.3vw;
+		padding-top: 3%;
+		padding-left: 1%;
+	}
+	.rpb_confirmed {
+		width: 31%;
+		margin-left: 1%;
+	}
+	.rpb_confirmed p{
+		font-size: 3.3vw;
+		padding-top: 3.5%;
+		padding-left: 1%;
+	}
+
+	.rpb_change_email{
+		width: 80%;
+		margin: 2.5% 10%;
+	}
+	.rpb_change_email p{
+		font-size: 4vw;
+		padding: 2% 0 2% 0;
+		padding-left: 1%;
+	}
+	.rpb_change_password{
+		width: 80%;
+		margin: 0 10%;
+	}
+	.rpb_change_password p{
+		font-size: 4vw;
+		padding: 2% 0 2% 0;
+		padding-left: 1%;
+	}
+
+	/*---------------------------------------change password*/
+	.rpc_oldpass input{
+		font-size: 3.5vw;
+		background-color: #521e1e;
+		border: 1px solid #8c5858;
+		width: 75%;
+		font-family: "Oswald";
+		color: #fff;
+		padding-left: 5px;
+	}
+	.rpc_oldpass_warn{
+		grid-area: oldpass;
+		width: 75%;
+		margin-top:3%;
+		margin-left: 13.5vw;
+		display: flex;
+		text-align: left;
+	}
+	.rpc_oldpass_warn p{
+		display: none;
+		padding-left: 5px;
+		color: orange;
+		font-size: 2.5vw;
+	}
+
+	.rpc_oldpass_pic{
+		width: 4.5vw;
+		margin-right: 5px;
+	}
+
+	.rpc_submit{
+		display: flex;
+		justify-content: center;
+	}
+	.rpc_submit_btn{
+		font-size: 3.8vw;
+		background-color: #6b2828;
+		border: 1px solid #8c5858;
+		color: #fff;
+		margin-top: 4%;
+		margin-bottom: 4%;
+		width: 40%;
+		transition-property: background-color;
+		transition-duration: 0.2s;
+		font-family: "Bebas Neue";
+		padding-left: 0px;
+		text-align: center;
+	}
+
+	/*---------------------------------------change mail*/
+	.rfc_pass input{
+		font-size: 3.5vw;
+		background-color: #521e1e;
+		border: 1px solid #8c5858;
+		width: 75%;
+		font-family: "Oswald";
+		color: #fff;
+		padding-left: 5px;
+	}
+	.rfc_pass_warn{
+		grid-area: oldpass;
+		width: 75%;
+		margin-top:3%;
+		margin-left: 13.5vw;
+		display: flex;
+		text-align: left;
+	}
+	.rfc_pass_warn p{
+		display: none;
+		padding-left: 5px;
+		color: orange;
+		font-size: 2.5vw;
+	}
+
+	.rfc_pass_pic{
+		width: 4.5vw;
+		margin-right: 5px;
+	}
+
+	.rfc_submit{
+		display: flex;
+		justify-content: center;
+	}
+	.rfc_submit_btn{
+		font-size: 3.8vw;
+		background-color: #6b2828;
+		border: 1px solid #8c5858;
+		color: #fff;
+		margin-top: 4%;
+		margin-bottom: 4%;
+		width: 40%;
+		transition-property: background-color;
+		transition-duration: 0.2s;
+		font-family: "Bebas Neue";
+		padding-left: 0px;
+		text-align: center;
+	}
+
+	/*---------------------------------------change pass // mail*/
+	.rpc_name{
+		text-align: center;
+	}
+	.rpc_name p{
+		color: white;
+		font-size: 4vw;
+		padding: 1.5% 0 1.5% 0;
+	}
+}
+
+
+@media (max-width: 425px){
+	.welcome_box{
+		grid-area: head;
+		text-align: center;
+		height: 13.5vw;
+		
+		background: url(../svg/title_index_1_small.svg) 50% 50% no-repeat fixed;
+		background-size: 90%;
+		background-attachment: scroll;
+	}
+	.welcome_text{
+		font-size: 7vw;
+		margin-top: 2.7vw;
+		color: white;
+		background: linear-gradient(-60deg, #b04343 31%, #851d1d 50%, #eb7171 65%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		/*background-color: lightgray;*/
+	}
+}
